@@ -1,0 +1,95 @@
+
+.Login {
+    height: 100vh;
+    grid-template-rows: 308px 1fr;
+    display: grid;
+    &__img--Two {
+      display: none;
+      padding-top: 55px;
+    }
+    &__banner {
+      position: relative;
+      display: none;
+      &-nav {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+      &-imgBlur {
+        position: absolute;
+        height: 100%;
+        display: none;
+      }
+      &-imgBlurTwo {
+        display: none;
+      }
+    }
+    &__img {
+      position: absolute;
+      right: 0;
+      bottom: -24px;
+    }
+  }
+
+
+
+  @media (min-width: 990px) {
+    .Login {
+      height: 100vh;
+      grid-template-rows: 1fr;
+      display: grid;
+      grid-template-columns: 2fr 1.5fr;
+      &__banner {
+        display: inline-block;
+      }
+      &__banner-firma {
+        display: block;
+        font-family: var(--font-poppins);
+        font-size: 12px;
+        color: #bababa8a;
+        padding-top: 32px;
+        margin-left: -14px;
+      }
+      &__banner-nav {
+        padding-left: 96px;
+        padding-right: 35px;
+        padding-top: 24px;
+      }
+      &__img {
+        display: none;
+      }
+      &__banner-text {
+        display: flex;
+        justify-content: center;
+      }
+      &__img--Two {
+        display: block;
+        z-index: 2;
+        width: 29vw;
+      }
+      &__banner-imgBlur {
+        display: inline-block;
+      }
+      &__banner-imgBlurTwo {
+        position: absolute;
+        height: 90%;
+        right: 0;
+        display: inline-block;
+      }
+    }
+  
+    .loginForm {
+      margin-right: auto;
+      margin-left: 0;
+      max-width: 301px;
+      align-items: center;
+      padding-right: 27px;
+      position: relative;
+      padding-top: 76px;
+      &__cotizar {
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  }

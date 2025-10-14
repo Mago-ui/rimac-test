@@ -1,0 +1,138 @@
+html,
+body,
+p {
+  font-family: var(--font-poppins);
+}
+
+body {
+  background-color: #fafbff;
+}
+
+
+
+.container {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  line-height: 1.7;
+  color: #676f8f;
+  font-family: var(--font-poppins);
+  margin-top: 10px;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #e6e6e6;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#c3 input:checked ~ .checkmark {
+  background-color: #000;
+  border-radius: 4px;
+  }
+
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.loginForm {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 345px;
+  align-items: center;
+  padding-right: 0px;
+  position: relative;
+  padding-top: 76px;
+  &__cotizar {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+
+
+.colorError {
+  color: red;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+//----------------------------------------
+
+.Footer {
+  background: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12vw;
+  padding-right: 12vw;
+  color: white;
+  p {
+    font-size: 12px;
+  }
+}
+
+.Header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-left: 12vw;
+  padding-right: 12vw;
+  top: 18px;
+}
+
+.change {
+  display: none;
+}
+
+@media (min-width: 990px) {
+  .change {
+    display: inline-block;
+  }
+}
+
+
+

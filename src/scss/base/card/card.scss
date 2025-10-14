@@ -1,0 +1,80 @@
+.Card {
+  background: #ffff;
+  box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 21px;
+  width: 256px;
+  padding: 18px;
+  position: relative;
+  &__container {
+    display: flex;
+    grid-gap: 37px;
+    justify-content: center;
+    margin-top: 39px;
+  }
+}
+
+.CardTitle {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.CardText {
+  font-size: 12px;
+}
+
+.checkContainer {
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  line-height: 1.7;
+  color: #676f8f;
+  font-family: var(--font-poppins);
+  margin-top: 10px;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+}
+
+.check {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  height: 25px;
+  width: 25px;
+  border-radius: 12px;
+  border: 2px solid rgba(155, 155, 155, 0.35);
+}
+
+.check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+input:checked ~ .check:after {
+  display: block;
+}
+
+.check:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #ffff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#c2 input:checked ~ .check {
+  background-color: #20c73f;
+  border-radius: 22px;
+  border: 1px solid #20c73f;
+}

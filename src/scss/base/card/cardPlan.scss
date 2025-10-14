@@ -1,0 +1,89 @@
+.CardPlan {
+  background: white;
+  box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 21px;
+  width: 288px;
+  padding: 18px;
+  position: relative;
+  padding-top: 70px;
+  &__button{
+    width: 87%;
+    height: 48px;
+    background: #FF1C44;
+    color: white;
+    border-radius: 40px;
+    border: 1px solid #FF1C44;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+
+  }
+  &__separation{
+    padding: 24px 24px 50px 24px;
+  
+    li{
+      line-height: 1.7;
+      padding-bottom: 25px;
+    }
+  }
+  &__container {
+    display: flex;
+    grid-gap: 33px;
+    overflow: auto;
+    margin-top: 33px;
+    margin-bottom: 42px;
+  }
+  &__textHome{
+    font-size: 24px;
+    font-weight: 800;
+    padding-bottom: 15px;
+  }
+  &__size{
+    width: 254px;
+  }
+  &__price{
+    font-size: 12px;
+    color: #0000004f;
+    font-weight: 700;
+    line-height: 2;
+  }
+  &__textMedic{
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 19px;
+  }
+  img{
+    position: absolute;
+    right: 35px;
+    top: 83px;
+  }
+}
+
+.separation{
+  width: 100%;
+  height: 1px;
+  background: #b2b2b233;
+}
+
+
+
+.CardPlan__container::-webkit-scrollbar {
+  height: 10px;
+}
+
+
+.CardPlan__container::-webkit-scrollbar-track {
+  
+  border-radius: 10px;
+}
+ 
+
+.CardPlan__container::-webkit-scrollbar-thumb {
+  background: #e1e2e4; 
+  border-radius: 10px;
+}
+
+
+.CardPlan__container::-webkit-scrollbar-thumb:hover {
+  background: #e1e2e4; 
+}
