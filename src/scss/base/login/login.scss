@@ -3,6 +3,8 @@
     height: 100vh;
     grid-template-rows: 308px 1fr;
     display: grid;
+    overflow: auto;
+    padding-bottom: 4rem;
     &__img--Two {
       display: none;
       padding-top: 55px;

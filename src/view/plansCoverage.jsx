@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import imagenArrow from "../../src/assets/images/arrow.png";
 import Cards from "../components/cards/Cards";
 import CardPlan from "../components/cards/cardPlan";
+import { environment } from "../environments/environment";
+import { PATH } from "../constants";
 
 function PlansCoverage() {
   const { state } = useLocation();
@@ -15,7 +17,7 @@ function PlansCoverage() {
   useEffect(() => {
     const publicar = async () => {
       let res = await fetch(
-        "https://rimac-front-end-challenge.netlify.app/api/plans.json"
+        `${environment.apiUrl}${PATH.GET_PLANS}`
       );
       let data = await res.json();
       setDataPlan(data);
