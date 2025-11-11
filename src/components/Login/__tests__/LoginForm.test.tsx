@@ -11,7 +11,6 @@ describe("LoginForm", () => {
       </MemoryRouter>
     );
 
-    // Verifica que existan los elementos principales
     expect(screen.getByText(/Seguro Salud Flexible/i)).toBeInTheDocument();
     expect(screen.getByText(/Creado para ti y tu familia/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Cotiza aquí/i })).toBeInTheDocument();
@@ -30,7 +29,6 @@ describe("LoginForm", () => {
     fireEvent.click(submitButton);
 
     await waitFor(() => {
-      // Solo verificamos los mensajes que realmente aparecen
       expect(screen.getByText(/Ingrese un Número de DNI/i)).toBeInTheDocument();
       expect(screen.getByText(/Ingrese un Número de Celular/i)).toBeInTheDocument();
     });
@@ -50,15 +48,12 @@ describe("LoginForm", () => {
       target: { value: "987654321" },
     });
 
-    // Marca los checkboxes
     const checkboxes = screen.getAllByRole("checkbox");
     checkboxes.forEach((cb) => fireEvent.click(cb));
 
-    // Enviamos el formulario
     const submitButton = screen.getByRole("button", { name: /Cotiza aquí/i });
     fireEvent.click(submitButton);
 
-    // No deben aparecer errores
     await waitFor(() => {
       expect(screen.queryByText(/Ingrese un Número de DNI/i)).not.toBeInTheDocument();
       expect(screen.queryByText(/Ingrese un Número de Celular/i)).not.toBeInTheDocument();
